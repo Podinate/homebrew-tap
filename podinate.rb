@@ -5,20 +5,20 @@
 class Podinate < Formula
   desc "A CLI tool for Podinate - the friendly Kubernetes manager"
   homepage "https://www.podinate.com"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/podinate/podinate/releases/download/v0.0.3/podinate_Darwin_arm64.tar.gz"
-      sha256 "882752dced1be4fd942ced55ad064c20906e68b1e623e4305ac73c6cc195ea9a"
+    if Hardware::CPU.intel?
+      url "https://github.com/podinate/podinate/releases/download/v0.0.4/podinate_Darwin_x86_64.tar.gz"
+      sha256 "e2e890d6de754eae2a2a0e57ca780150efe2b8b3092d568d08e3eca238de6be4"
 
       def install
         bin.install "podinate"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/podinate/podinate/releases/download/v0.0.3/podinate_Darwin_x86_64.tar.gz"
-      sha256 "a61364273f8bf6c3200ded4df8496f0a4bc6ce521468c151d6202a0ba4302f00"
+    if Hardware::CPU.arm?
+      url "https://github.com/podinate/podinate/releases/download/v0.0.4/podinate_Darwin_arm64.tar.gz"
+      sha256 "31ae9278618742f787087abeecdee5e56241350348117d80d9be659a081e7dc9"
 
       def install
         bin.install "podinate"
@@ -27,17 +27,17 @@ class Podinate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/podinate/podinate/releases/download/v0.0.3/podinate_Linux_arm64.tar.gz"
-      sha256 "54cb00c7e4c80a43111ed5f1759fe81f073a4d67d5acd10adee4f933033a3b08"
+    if Hardware::CPU.intel?
+      url "https://github.com/podinate/podinate/releases/download/v0.0.4/podinate_Linux_x86_64.tar.gz"
+      sha256 "d50aa027e9ea747638500f05652031f95388a973470f96ee5bc5fde0b41a0354"
 
       def install
         bin.install "podinate"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/podinate/podinate/releases/download/v0.0.3/podinate_Linux_x86_64.tar.gz"
-      sha256 "33a75b7be3ba761356fc464857b7d9e94da8d3ef17ce87900fb5264e4912c85e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/podinate/podinate/releases/download/v0.0.4/podinate_Linux_arm64.tar.gz"
+      sha256 "2b1602e45eeb8ce469c0a08a71a7e9062982142c3e85b94ecf3f71207cf651d1"
 
       def install
         bin.install "podinate"
