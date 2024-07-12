@@ -10,7 +10,7 @@ class Podinate < Formula
   on_macos do
     on_intel do
       url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Darwin_x86_64.tar.gz"
-      sha256 "9d0f9694580e0c675104d121a776a0ff68d2d2c8e92eb5e2882cb27f62c8a1ad"
+      sha256 "ddc390cfe183993967dbd360e7f147006304b490862f6ac3375a166886c05345"
 
       def install
         bin.install "podinate"
@@ -21,7 +21,7 @@ class Podinate < Formula
     end
     on_arm do
       url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Darwin_arm64.tar.gz"
-      sha256 "3f7a763aed17f723b117c3ed79caf528dd4bd875e92babf9c260576a95cbbd11"
+      sha256 "b66d807ceed6952f7a5574c092683928c45d7b2010b4e09ce0473a2fa2205655"
 
       def install
         bin.install "podinate"
@@ -36,7 +36,7 @@ class Podinate < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Linux_x86_64.tar.gz"
-        sha256 "413725dfcaf34700e830039b312fc6c3e8118231f0623202fb0174d0d80ceec3"
+        sha256 "f2c845104df2fe5542b2c6bdfc2a7fc79ee6d4d9155fb2278f8e328e017d36f4"
 
         def install
           bin.install "podinate"
@@ -49,7 +49,7 @@ class Podinate < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Linux_arm64.tar.gz"
-        sha256 "165e1b6c48b4e6814f56121555727d2c4e1a5b873823a8d70f348f7278beaf5f"
+        sha256 "3784524c65684d4ba6cc0f47425ca3e257cfddb9141282aa8bb989765a600b4c"
 
         def install
           bin.install "podinate"
