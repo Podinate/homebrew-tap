@@ -5,23 +5,29 @@
 class Podinate < Formula
   desc "Podinate - Declarative Kubernetes for developers"
   homepage "https://www.podinate.com"
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     on_intel do
-      url "https://github.com/podinate/podinate/releases/download/v0.0.7/podinate_Darwin_x86_64.tar.gz"
-      sha256 "3797bf000f7cb631e1a5bf3ee7c5f4611ff31cc896deee8cace7aaf95b6860d4"
+      url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Darwin_x86_64.tar.gz"
+      sha256 "9d0f9694580e0c675104d121a776a0ff68d2d2c8e92eb5e2882cb27f62c8a1ad"
 
       def install
         bin.install "podinate"
+        bash_completion.install "completions/podinate.bash" => "podinate"
+        zsh_completion.install "completions/podinate.zsh" => "_podinate"
+        fish_completion.install "completions/podinate.fish"
       end
     end
     on_arm do
-      url "https://github.com/podinate/podinate/releases/download/v0.0.7/podinate_Darwin_arm64.tar.gz"
-      sha256 "f7be42576444f7dbff938318acfe24392ba015da7a2ace92053ddacc7654ec90"
+      url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Darwin_arm64.tar.gz"
+      sha256 "3f7a763aed17f723b117c3ed79caf528dd4bd875e92babf9c260576a95cbbd11"
 
       def install
         bin.install "podinate"
+        bash_completion.install "completions/podinate.bash" => "podinate"
+        zsh_completion.install "completions/podinate.zsh" => "_podinate"
+        fish_completion.install "completions/podinate.fish"
       end
     end
   end
@@ -29,21 +35,27 @@ class Podinate < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/podinate/podinate/releases/download/v0.0.7/podinate_Linux_x86_64.tar.gz"
-        sha256 "4da661320af4945a72275f41fbd18b885246a865b3c6e87bb2937d939a8875ec"
+        url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Linux_x86_64.tar.gz"
+        sha256 "413725dfcaf34700e830039b312fc6c3e8118231f0623202fb0174d0d80ceec3"
 
         def install
           bin.install "podinate"
+          bash_completion.install "completions/podinate.bash" => "podinate"
+          zsh_completion.install "completions/podinate.zsh" => "_podinate"
+          fish_completion.install "completions/podinate.fish"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/podinate/podinate/releases/download/v0.0.7/podinate_Linux_arm64.tar.gz"
-        sha256 "d312ffcd2cfabf28c481b193c81d85fbae8e9632a6c6227689cccf6a3361fcb1"
+        url "https://github.com/podinate/podinate/releases/download/v0.0.8/podinate_Linux_arm64.tar.gz"
+        sha256 "165e1b6c48b4e6814f56121555727d2c4e1a5b873823a8d70f348f7278beaf5f"
 
         def install
           bin.install "podinate"
+          bash_completion.install "completions/podinate.bash" => "podinate"
+          zsh_completion.install "completions/podinate.zsh" => "_podinate"
+          fish_completion.install "completions/podinate.fish"
         end
       end
     end
